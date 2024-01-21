@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv=“Pragma” content=”no-cache”>
+<meta http-equiv=“Expires” content=”-1″>
+<meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" href="css/master.css">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<title>Fame Weather Forecast App</title>
+</head>
+
+<body>
+	<nav>
+			<div class="navbar container flex">
+		<div class="pt-2">
+			<img src="images/globe.jpg" class="logo w-48  " alt="logo" />
+		</div>
+	</nav>
+<div class=" mycontainer container flex flex-col md:ml-9 rounded-lg ">
+    <h1 class="text-center text-3xl font-bold">Emmanuel Weather App</h1>
+    <h2 class="text-center text-xl font-bold">Choose Your City: </h2>
+    <div class="flex flex-col items-center">
+        <select id="citySelect" name="city">
+            <option value="0" selected>Select City</option>
+            <option value="1">Amsterdam</option>
+            <option value="2">Ankara</option>
+            <option value="3">Åstorp</option>
+            <option value="4">Athens</option>
+            <option value="5">Belfast</option>
+            <option value="6">Barcelona</option>
+            <option value="7">Berlin</option>
+            <option value="8">Bern</option>
+            <option value="9">Bilbao</option>
+            <option value="10">Brussels</option>
+            <option value="11">Bucharest</option>
+            <option value="12">Budapest</option>
+            <option value="13">Cardiff</option>
+            <option value="14">Cologne</option>
+            <option value="15">Copenhagen</option>
+            <option value="16">Cork</option>
+            <option value="17">Dublin</option>
+            <option value="18">Edinburgh</option>
+            <option value="19">Florence</option>
+            <option value="20">Frankfurt</option>
+            <option value="21">French Riviera</option>
+            <option value="22">Funchal</option>
+            <option value="23">Gothenburg</option>
+            <option value="24">Hamburg</option>
+            <option value="25">Helsinki</option>
+            <option value="26">Ibiza</option>
+            <option value="27">Kyiv</option>
+            <option value="28">Lillehammer</option>
+            <option value="29">Lisbon</option>
+            <option value="30">London</option>
+            <option value="31">Madrid</option>
+            <option value="32">Mallorca</option>
+            <option value="33">Manchester</option>
+            <option value="34">Marseille</option>
+            <option value="35">Maspalomas</option>
+            <option value="36">Milan</option>
+            <option value="37">Munich</option>
+            <option value="38">Naples</option>
+            <option value="39">Oñati</option>
+            <option value="40">Oslo</option>
+            <option value="41">Paris</option>
+            <option value="42">Prague</option>
+            <option value="43">Reykjavík</option>
+            <option value="44">Riga</option>
+            <option value="45">Rome</option>
+            <option value="46">Santa Cruz das Flores</option>
+            <option value="47">Santa Cruz de Tenerife</option>
+            <option value="48">Skye</option>
+            <option value="49">Sofia</option>
+            <option value="50">Stockholm</option>
+            <option value="51">Tallinn</option>
+            <option value="52">Vienna</option>
+            <option value="53">Warsaw</option>
+            <option value="54">York</option>
+            <option value="55">Zurich</option>
+						<option value="56">Lagos</option>
+						<option value="57">Abeokuta</option>
+						<option value="58">PortHarcourt</option>
+						<option value="59">Kano</option>
+						<option value="60">Abuja</option>
+						<option value="61">Kaduna</option>
+						<option value="62">Katsina</option>
+						<option value="63">Ibadan, Oluyole</option>
+						<option value="64">Okaka,Oyo State</option>
+						<option value="65">Ufa</option>
+						<option value="66">Moscow</option>
+						<option value="67">Saint Petersburg</option>
+						<option value="68">Irkutsk</option>
+        </select>                
+				<button class="INFO btn mt-2 rounded-md text-center p-2 text-2xl bg-gray-700 ">
+					Show Icon info
+				</button>
+			</div>
+			<div class="hidden inform text-center">
+				<p class="font-bold text-xl mb-4">Icon Definition</p>
+				<table class="border border-collapse w-full">
+						<thead>
+								<tr>
+										<th class="border p-2">Icon</th>
+										<th class="border p-2">Meaning</th>
+										<th class="border p-2">Technical Definition</th>
+								</tr>
+						</thead>
+						<tbody>
+								<tr>
+										<td class="border p-2"><img src="/images/clear.png" alt="Clear"></td>
+										<td class="border p-2">Clear</td>
+										<td class="border p-2">Total cloud cover less than 20%</td>
+								</tr>
+								<tr>
+									<td class="border p-2"><img src="/images/pcloudy.png" alt="Partly Cloudy"></td>
+									<td class="border p-2">Partly Cloudy</td>
+									<td class="border p-2">Total cloud cover between 20%-60%</td>
+							</tr>
+							<tr>
+								<td class="border p-2"><img src="/images/mcloudy.png" alt="More Cloudy"></td>
+								<td class="border p-2">Cloudy</td>
+								<td class="border p-2">Total cloud cover between 60%-80%</td>
+						</tr>
+						<tr>
+							<td class="border p-2"><img src="/images/cloudy.png" alt="Very Cloudy"></td>
+							<td class="border p-2">Very Cloudy</td>
+							<td class="border p-2">Total cloud cover over 80%</td>
+					</tr>
+					<tr>
+						<td class="border p-2"><img src="/images/fog.png" alt="Foggy"></td>
+						<td class="border p-2">Foggy</td>
+						<td class="border p-2">Relative Humidity over 90% with total cloud cover less than 60%</td>
+				</tr>
+				<tr>
+					<td class="border p-2"><img src="/images/lightrain.png" alt="lightrain"></td>
+					<td class="border p-2">Lightrain or showers</td>
+					<td class="border p-2">Precipitation rate less 
+						than 4mm/hr with cloud cover more than 80%</td>
+			</tr>
+			<tr>
+				<td class="border p-2"><img src="/images/oshower.png" alt="Occasional showers"></td>
+				<td class="border p-2">Occasional showers</td>
+				<td class="border p-2">Precipitation rate less 
+					than 4mm/hr with cloud cover between 60%-80%</td>
+			</tr>
+			<tr>
+				<td class="border p-2"><img src="/images/ishower.png" alt="Isolated showers"></td>
+				<td class="border p-2">Isolated showers</td>
+				<td class="border p-2">Precipitation rate less 
+					than 4mm/hr less than 60%</td>
+			</tr>
+			<tr>
+				<td class="border p-2"><img src="/images/lightsnow.png" alt="Light snow"></td>
+				<td class="border p-2">Light or Occasional snow</td>
+				<td class="border p-2">Precipitation rate less 
+					than 4mm/hr</td>
+			</tr>
+			<tr>
+				<td class="border p-2"><img src="/images/rain.png" alt="Rain"></td>
+				<td class="border p-2">Rain</td>
+				<td class="border p-2">Precipitation rate over 
+					4mm/hr</td>
+			</tr>
+			<tr>
+				<td class="border p-2"><img src="/images/snow.png" alt="Snow"></td>
+				<td class="border p-2">Snow</td>
+				<td class="border p-2">Precipitation rate over 
+					4mm/hr</td>
+			</tr>
+			<tr>
+				<td class="border p-2"><img src="/images/rainsnow.png" alt="Mixed"></td>
+				<td class="border p-2">Mixed</td>
+				<td class="border p-2">Precipitation type to be 
+					ice pellets or freezing rain</td>
+			</tr>
+			<tr>
+				<td class="border p-2"><img src="/images/tstorm.png" alt="Thunderstorm Possible"></td>
+				<td class="border p-2">Thunderstorm Possible</td>
+				<td class="border p-2">Lifted Index less than -5 
+					with precipitation rate below 4mm/hr</td>
+			</tr>
+			<tr>
+				<td class="border p-2"><img src="/images/tsrain.png" alt="ThunderStorm"></td>
+				<td class="border p-2">Thunderstorm</td>
+				<td class="border p-2">Lifted Index less than -5 
+					with precipitation rate over 4mm/hr</td>
+			</tr>
+			<tr>
+				<td class="border p-2"><img src="/images/windy.png" alt="Windy"></td>
+				<td class="border p-2">Windy</td>
+				<td class="border p-2">Sustained wind speed over 
+					10.8m/s (force 6 or above)</td>
+			</tr>
+			
+						</tbody>
+				</table>
+				<small class="block mt-4">Icons are designed by Weather Sniffer and Iconbest from 7timer.info</small>
+			</div>
+			
+</div>
+<div class="City font-bold ">
+    <code>City</code>
+</div>
+<section class="result  container flex flex-col  rounded-lg">
+<img class="Weather flex flex-row justify-between items-center">Weather Table</img>
+</section>
+
+</body>
+
+<footer>
+    
+</footer>
+
+
+<script src="js/main.js"></script>
+</html>

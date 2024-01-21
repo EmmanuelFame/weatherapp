@@ -1,0 +1,125 @@
+body {
+  background-color: mediumvioletred;
+  color: black;
+  background-image: url(/images/cherry.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+nav {
+  background-image: url(/images/weather.jpg);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: exclusion;
+  animation: 80s linear infinite background-pos;
+}
+.logo {
+  border-radius: 50%;
+}
+.mycontainer {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  align-items: center;
+  justify-content: center;
+  color: blanchedalmond;
+  background-color: rgba(51, 123, 223, 0.45);
+  font-size: 20px;
+  padding: 10px;
+}
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  color: black;
+  background-color: chocolate;
+}
+select:hover {
+  background-color: blueviolet;
+  color: brown;
+}
+.result {
+  position: absolute;
+  top: 80%;
+  align-items: center;
+  border-radius: 10%;
+  margin: 8px 0;
+  justify-content: center;
+  color: blanchedalmond;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.Weather {
+  background-color: rgb(22, 42, 112);
+  color: white;
+  width: fit-content;
+  border-radius: 5%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  z-index: -3;
+}
+.City {
+  color: yellow;
+  font-size: 20px;
+}
+.inform {
+  position: absolute;
+  top: 1140px;
+  width: 900px;
+  height: 500px;
+  align-items: center;
+  border-radius: 10%;
+  margin: 8px 0;
+  justify-content: center;
+  color: blanchedalmond;
+  font-size: 20px;
+  padding: 10px;
+  z-index: 5;
+}
+@media (max-width: 768px) {
+  .inform {
+    position: absolute;
+    top: 1000px;
+    width: 450px;
+    height: 250px;
+    align-items: center;
+    border-radius: 10%;
+    margin: 8px 0;
+    justify-content: center;
+    color: blanchedalmond;
+    font-size: 20px;
+    padding: 10px;
+    z-index: 5;
+  }
+}
+@keyframes background-pos {
+  10% {
+    background-position: top right;
+  }
+  20% {
+    background-position: center left;
+  }
+  30% {
+    background-position: center right;
+  }
+  40% {
+    background-position: top left;
+  }
+  50% {
+    background-position: center;
+  }
+  60% {
+    background-position: top right;
+  }
+  70% {
+    background-position: right bottom;
+  }
+  80% {
+    background-position: center;
+  }
+}
