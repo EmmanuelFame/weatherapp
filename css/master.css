@@ -1,13 +1,13 @@
 body {
   background-color: mediumvioletred;
   color: black;
-  background-image: url(/images/cherry.jpg);
+  background-image: url(static/cherry.jpg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
 }
 nav {
-  background-image: url(/images/weather.jpg);
+  background-image: url(static/weather.jpg);
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
