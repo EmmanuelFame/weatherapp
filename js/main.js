@@ -21,9 +21,10 @@
     selector.addEventListener("change", function () {
       const selectedCityIndex = selector.value;
       if (selectedCityIndex > 0) {
+        const corsAnywhereUrl = 'https://cors-anywhere.herokuapp.com/';
         const apiUrl = `https://www.7timer.info/bin/civil.php?lon=${longval[selectedCityIndex - 1]}&lat=${latval[selectedCityIndex - 1]}&ac=0&lang=en&unit=metric&output=internal&tzshift=0`;
   
-        fetch(apiUrl)
+        fetch(corsAnywhereUrl+apiUrl)
           .then((response) => {
             if (!response.ok) {
               throw new Error('Network response was not ok');
