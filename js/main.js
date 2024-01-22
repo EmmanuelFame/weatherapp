@@ -23,7 +23,7 @@
       const selectedCityIndex = selector.value;
       if (selectedCityIndex > 0) {
         
-        const apiUrl = `https://www.7timer.info/bin/civil.php?lon=${longval[selectedCityIndex - 1]}&lat=${latval[selectedCityIndex - 1]}&ac=0&lang=en&unit=metric&output=internal&tzshift=0`;
+        const apiUrl = `https://www.7timer.info/bin/astro.php?lon=${longval[selectedCityIndex - 1]}&lat=${latval[selectedCityIndex - 1]}&ac=0&lang=en&unit=metric&output=internal&tzshift=0`;
  
   
         fetch(apiUrl)
