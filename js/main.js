@@ -9,10 +9,13 @@
       52.367,39.933,56.134,37.983,54.597,41.387,52.520,46.948,43.263,50.847,47.497,59.329,51.483,50.937,55.676,51.898,
       53.349,55.953,43.7696,50.110,43.254,32.650,57.708,53.548,60.169,39.020,50.450,61.115,38.722,51.507,40.416,39.695,53.480,43.296,27.760,45.464,48.135,40.851,43.034,59.913,48.856,50.075,64.146,56.879,41.902,39.453,28.463,57.273,42.697,59.329,59.437,18.208,52.229,53.961,47.376,6.465422,7.145244,4.824167,12.000000,9.072264,10.609319,12.985531,7.376736, 8.21667,54.74306000,55.751244,59.937500,52.2855  
     ];
+    console.log(`total number of lattitudes: ${latval.length}`);
+    console.log(`total number of longitudes: ${longval.length}`);
+
     const citycountry = [
       'Amsterdam','Ankara','Åstorp','Athens','Belfast','Barcelona','Berlin','Bern','Bilbao','Brussels','Bucharest','Budapest','Cardiff','Cologne','Copenhagen','Cork','Dublin','Edinburgh','Florence','Frankfurt','French Riviera','Funchal','Gothenburg','Hamburg','Helsinki','Ibiza','Kyiv','Lillehammer', 'Lisbon','London','Madrid','Mallorca','Manchester','Marseille','Maspalomas','Milan','Munich','Naples','Oñati','Oslo','Paris','Prague','Reykjavík','Riga','Rome','Santa Cruz das Flores','Santa Cruz de Tenerife','Skye','Sofia','Stockholm','Tallinn','Vienna','Warsaw','York','Zurich','Lagos','Abeokuta','PortHarcourt','Kano','Abuja','Kaduna','Katsina','Ibadan','Okaka,Oyo State','Ufa','Moscow','Saint Petersburg','Irkutsk'
     ];
-  
+   console.log(`total number of cities: ${citycountry.length}`);
     const selector = document.querySelector("#citySelect");
     const weatherbox = document.querySelector(".Weather");
     const city = document.querySelector(".City");
@@ -23,6 +26,7 @@
       if (selectedCityIndex > 0) {
         
         const apiUrl = `https://www.7timer.info/bin/civil.php?lon=${longval[selectedCityIndex - 1]}&lat=${latval[selectedCityIndex - 1]}&ac=0&lang=en&unit=metric&output=internal&tzshift=0`;
+ 
   
         fetch(apiUrl)
           .then((response) => {
