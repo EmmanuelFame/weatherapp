@@ -38,6 +38,7 @@
             weatherbox.src = blobUrl;
             URL.revokeObjectURL(blobUrl);
             city.innerHTML = `This is the weather forecast for today and for the next 7 days in ${citycountry[selectedCityIndex - 1]}`;
+            console.log(blobData);
           })
           .catch((error) => {
             console.error('Error:', error);
