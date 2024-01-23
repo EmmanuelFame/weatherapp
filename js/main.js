@@ -48,10 +48,6 @@
     });
   }); 
 
-  console.log(`total number of lattitudes: ${latval.length}`);
-  console.log(`total number of longitudes: ${longval.length}`);
-   console.log(`total number of cities: ${citycountry.length}`);
-
   const info = document.querySelector(".INFO");
   const informer = document.querySelector(".inform");
 info.addEventListener("click", function () {
